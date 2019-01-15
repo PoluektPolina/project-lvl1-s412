@@ -31,8 +31,9 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "readline-sync": "^1.4.9"
+    "@babel/preset-env": "^7.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
