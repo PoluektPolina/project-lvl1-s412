@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-import { greeting, userName,  rules, isEven } from '..';
+import {
+  greeting, userName, description, isEven,
+} from '..';
 
 greeting();
 
-console.log(rules);
+console.log(description);
 
 userName();
 
