@@ -1,14 +1,15 @@
 import readlineSync from 'readline-sync';
+import isEven from 'is-even';
 
-const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-};
-const description = 'Answer "yes" if number even otherwise answer "no"';
+const greeting = 'Welcome to the Brain Games!';
 
-const userName = () => {
-  const getName = readlineSync.question('May I have your name?');
-  console.log(`hello,${getName}!`);
+const introductionEven = () => {
+  console.log(greeting);
+  const userName = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${userName}`);
+  console.log('Answer "yes" if number even otherwise answer "no"');
 };
+
 
 // for brain-even game //
 
@@ -19,31 +20,20 @@ const randomNumber = (min, max) => {
 };
 
 
-const isUserAnswerCorrect = (num, answer) => {
-  if (num % 2 === 0 && answer === 'yes') {
-    return 1;
-  }
-  if (num % 2 === 1 && answer === 'no') {
-    return 1;
-  }
-  return 0;
-};
-/* не могу понять, как добавить имя юзера в результат, потому что константа userName
-локальная.если делаю ее глобальной, то нарушается порядок выводимых сообщений
- в приветсвии   T_T */
+const isUserAnswerCorrect = (correctAnsw, userAnswer) => (correctAnsw === userAnswer ? 1 : 0);
 
 const startGame = () => {
   const question = randomNumber(1, 100);
   const userAnswer = readlineSync.question(`Question: ${question}`);
-  const correctAnswer = () => (question % 2 === 0 ? 'yes' : 'no');
-  const result = isUserAnswerCorrect(question, userAnswer);
+  const correctAnswer = num => (isEven(num) ? 'yes' : 'no');
+  const result = isUserAnswerCorrect(correctAnswer(question), userAnswer);
   if (result === 1) {
     return 'Correct!';
   }
   return `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer()}`;
 };
 
-const isEven = () => {
+const brainEven = () => {
   const iter = (gameResult, score) => {
     if (gameResult !== 'Correct!') {
       console.log(gameResult);
@@ -54,7 +44,8 @@ const isEven = () => {
       console.log('Correct!');
     }
     if (score === 3) {
-      return 'Congratulations!';
+      console.log('Congratulations!');
+      return null;
     }
     return iter(startGame(), score + 1);
   };
@@ -62,5 +53,5 @@ const isEven = () => {
 };
 
 export {
-  greeting, userName, isEven, description,
+  introductionEven, brainEven,
 };

@@ -1,12 +1,6 @@
 #!/usr/bin/env node
-import {
-  greeting, userName, description, isEven,
-} from '..';
+import { introductionEven, brainEven } from '..';
 
-greeting();
 
-console.log(description);
-
-userName();
-
-isEven();
+introductionEven();
+brainEven();
