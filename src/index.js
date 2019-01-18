@@ -30,7 +30,7 @@ const startGame = () => {
   if (result === 1) {
     return 'Correct!';
   }
-  return `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer()}`;
+  return `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer(question)}`;
 };
 
 const brainEven = () => {
