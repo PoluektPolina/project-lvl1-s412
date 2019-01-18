@@ -6,4 +6,9 @@ package creation https://www.npmjs.com/package/project-1-poluektova
 
 <a href="https://travis-ci.com/PoluektPolina/project-lvl1-s412"><img src="https://travis-ci.com/PoluektPolina/project-lvl1-s412.svg?branch=master" /></a>
 
+How to install and launch brain-even game.
 <a href="https://asciinema.org/a/aFCk1baCZJSWxI9rRA0powEoc" target="_blank"><img src="https://asciinema.org/a/aFCk1baCZJSWxI9rRA0powEoc.svg" /></a>
+
+Brain-cacl game.
+
+<a href="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO" target="_blank"><img src="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO.svg" /></a>
