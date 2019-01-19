@@ -12,3 +12,6 @@ How to install and launch brain-even game.
 Brain-cacl game.
 
 <a href="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO" target="_blank"><img src="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO.svg" /></a>
+
+Brain-gcd game
+<a href="https://asciinema.org/a/3SffmZQArrFE7tfrhaOAzVuMh" target="_blank"><img src="https://asciinema.org/a/3SffmZQArrFE7tfrhaOAzVuMh.svg" /></a>
