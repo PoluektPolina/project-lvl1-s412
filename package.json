@@ -1,6 +1,6 @@
 {
   "name": "project-1-poluektova",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "brain games project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

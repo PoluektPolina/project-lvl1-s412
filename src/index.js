@@ -1,21 +1,6 @@
 import readlineSync from 'readline-sync';
 import isEven from 'is-even';
 
-const greeting = 'Welcome to the Brain Games!';
-
-const introductionEven = () => {
-  console.log(greeting);
-  const userName = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${userName}`);
-  console.log('Answer "yes" if number even otherwise answer "no"');
-};
-const introductionCalc = () => {
-  console.log(greeting);
-  const userName = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${userName}`);
-  console.log('What is the result of the expression?');
-};
-
 
 // for brain-even game //
 
@@ -94,6 +79,4 @@ const brainGame = (game) => {
   iter(startGame(), 1);
 };
 
-export {
-  introductionEven, introductionCalc, brainGame,
-};
+export default brainGame;

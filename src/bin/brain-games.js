@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { introductionEven } from '..';
+import introductionEven from '../games/game-brain-calc';
 
 introductionEven();
