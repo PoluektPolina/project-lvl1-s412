@@ -1,12 +1,18 @@
-import readlineSync from 'readline-sync';
+import isEven from 'is-even';
+import { cons } from 'hexlet-pairs';
 
-const greeting = 'Welcome to the Brain Games!';
+const description = 'Answer "yes" if number even otherwise answer "no"';
 
-const introductionCalc = () => {
-  console.log(greeting);
-  const userName = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${userName}`);
-  console.log('Answer "yes" if number even otherwise answer "no"');
+const randomNumber = (min, max) => {
+  const rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
 };
 
-export default introductionCalc;
+const brainEven = () => {
+  const question = randomNumber(1, 100);
+  const correctAnsw = isEven(question) ? 'yes' : 'no';
+  return cons(description, cons(question, correctAnsw));
+};
+
+
+export default brainEven;

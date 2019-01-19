@@ -1,12 +1,36 @@
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
 
-const greeting = 'Welcome to the Brain Games!';
+const description = 'What is the result of the expression?';
 
-const introductionCalc = () => {
-  console.log(greeting);
-  const userName = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${userName}`);
-  console.log('What is the result of the expression?');
+const randomNumber = (min, max) => {
+  const rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
 };
 
-export default introductionCalc;
+const randomOperation = () => {
+  const items = ['+', '-', '*'];
+  const random = items[Math.floor(Math.random() * items.length)];
+  return random;
+};
+
+const brainCalc = () => {
+  const num1 = randomNumber(1, 20);
+  const num2 = randomNumber(2, 15);
+  const operation = randomOperation();
+  const expression = () => {
+    switch (operation) {
+      case '+':
+        return num1 + num2;
+      case '-':
+        return num1 - num2;
+      case '*':
+        return num1 * num2;
+      default:
+        return 0;
+    }
+  };
+  const correctAnsw = String(expression());
+  return cons(description, cons(`${num1}${operation}${num2}`, correctAnsw));
+};
+
+export default brainCalc;

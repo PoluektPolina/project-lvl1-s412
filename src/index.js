@@ -1,64 +1,27 @@
 import readlineSync from 'readline-sync';
-import isEven from 'is-even';
+import { car, cdr } from 'hexlet-pairs';
 
 
-// for brain-even game //
+const greeting = 'Welcome to the Brain Games!';
 
-
-const randomNumber = (min, max) => {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-};
-
-const randomOperation = () => {
-  const items = ['+', '-', '*'];
-  const random = items[Math.floor(Math.random() * items.length)];
-  return random;
-};
 
 const isUserAnswerCorrect = (correctAnsw, userAnswer) => (correctAnsw === userAnswer ? 1 : 0);
 
-// horrible code, sorry//
-
 const brainGame = (game) => {
+  console.log(greeting);
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}`);
+  console.log(car(game));
+
   const startGame = () => {
-    const num1 = randomNumber(1, 20);
-    const num2 = randomNumber(2, 10);
-    const operation = randomOperation();
-
-    const questionGenerator = () => {
-      if (game === 'even') {
-        return randomNumber(1, 100);
-      }
-      return `${num1}${operation}${num2}`;
-    };
-    const question = questionGenerator();
-
-    const correctAnswer = () => {
-      if (game === 'even') {
-        return (isEven(question) ? 'yes' : 'no');
-      }
-      const expression = () => {
-        switch (operation) {
-          case '+':
-            return num1 + num2;
-          case '-':
-            return num1 - num2;
-          case '*':
-            return num1 * num2;
-          default:
-            return 0;
-        }
-      };
-      return String(expression());
-    };
-
+    const question = car(cdr(game));
+    const correctAnswer = cdr(cdr(game));
     const userAnswer = readlineSync.question(`Question: ${question}`);
-    const result = isUserAnswerCorrect(correctAnswer(), userAnswer);
+    const result = isUserAnswerCorrect(correctAnswer, userAnswer);
     if (result === 1) {
       return 'Correct!';
     }
-    return `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer()}`;
+    return `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`;
   };
 
   const iter = (gameResult, score) => {
