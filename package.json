@@ -1,6 +1,6 @@
 {
   "name": "project-1-poluektova",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "brain games project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,8 @@
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js"
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
     "is-even": "^1.0.0",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.9",
+    "underscore": "^1.9.1"
   }
 }
