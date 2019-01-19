@@ -10,11 +10,11 @@ const randomNumber = (min, max) => {
 const findGcd = (num1, num2) => {
   const denomStart = () => (num1 > num2 ? num2 : num1);
 
-  const iter = (denom) => {
-    if (num1 % denom === 0 && num2 % denom === 0) {
-      return denom;
+  const iter = (divisor) => {
+    if (num1 % divisor === 0 && num2 % divisor === 0) {
+      return divisor;
     }
-    return iter(denom - 1);
+    return iter(divisor - 1);
   };
   return iter(denomStart());
 };
