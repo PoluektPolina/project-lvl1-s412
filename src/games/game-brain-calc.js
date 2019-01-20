@@ -1,4 +1,5 @@
 import { cons } from 'hexlet-pairs';
+import brainGame from '..';
 
 const description = 'What is the result of the expression?';
 
@@ -30,7 +31,9 @@ const brainCalc = () => {
     }
   };
   const correctAnsw = String(expression());
-  return cons(description, cons(`${num1}${operation}${num2}`, correctAnsw));
+  return cons(`${num1}${operation}${num2}`, correctAnsw);
 };
 
-export default brainCalc;
+const runGame = () => brainGame(description, brainCalc);
+
+export default runGame;

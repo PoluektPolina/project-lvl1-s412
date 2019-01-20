@@ -1,4 +1,5 @@
 import { cons } from 'hexlet-pairs';
+import brainGame from '..';
 
 const description = 'Find the greatest common divisor of given numbers';
 
@@ -8,7 +9,7 @@ const randomNumber = (min, max) => {
 };
 
 const findGcd = (num1, num2) => {
-  const denomStart = () => (num1 > num2 ? num2 : num1);
+  const divisorStart = () => (num1 > num2 ? num2 : num1);
 
   const iter = (divisor) => {
     if (num1 % divisor === 0 && num2 % divisor === 0) {
@@ -16,7 +17,7 @@ const findGcd = (num1, num2) => {
     }
     return iter(divisor - 1);
   };
-  return iter(denomStart());
+  return iter(divisorStart());
 };
 
 const brainGcd = () => {
@@ -24,7 +25,9 @@ const brainGcd = () => {
   const num2 = randomNumber(2, 50);
   const question = `${num1} ${num2}`;
   const correctAnswer = String(findGcd(num1, num2));
-  return cons(description, cons(question, correctAnswer));
+  return cons(question, correctAnswer);
 };
 
-export default brainGcd;
+const runGame = () => brainGame(description, brainGcd);
+
+export default runGame;
