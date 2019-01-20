@@ -1,12 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import brainGame from '..';
+import randomNumber from '../utils';
 
 const description = 'What is the result of the expression?';
-
-const randomNumber = (min, max) => {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-};
 
 const randomOperation = () => {
   const items = ['+', '-', '*'];
@@ -34,6 +30,4 @@ const brainCalc = () => {
   return cons(`${num1}${operation}${num2}`, correctAnsw);
 };
 
-const runGame = () => brainGame(description, brainCalc);
-
-export default runGame;
+export default () => brainGame(description, brainCalc);

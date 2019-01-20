@@ -1,13 +1,10 @@
 import { cons } from 'hexlet-pairs';
 import { range } from 'underscore';
 import brainGame from '..';
+import randomNumber from '../utils';
 
 const description = 'What number is missing in the progression?';
 
-const randomNumber = (min, max) => {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-};
 const brainProgression = () => {
   const startElement = randomNumber(1, 5);
   const progrStep = randomNumber(2, 5);
@@ -23,6 +20,4 @@ const brainProgression = () => {
   return cons(question, correctAnsw);
 };
 
-const runGame = () => brainGame(description, brainProgression);
-
-export default runGame;
+export default () => brainGame(description, brainProgression);

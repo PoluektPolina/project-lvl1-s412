@@ -1,13 +1,9 @@
 import isEven from 'is-even';
 import { cons } from 'hexlet-pairs';
 import brainGame from '..';
+import randomNumber from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no"';
-
-const randomNumber = (min, max) => {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-};
 
 const brainEven = () => {
   const question = randomNumber(1, 100);
@@ -15,6 +11,4 @@ const brainEven = () => {
   return cons(question, correctAnsw);
 };
 
-const runGame = () => brainGame(description, brainEven);
-
-export default runGame;
+export default () => brainGame(description, brainEven);
