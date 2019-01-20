@@ -11,12 +11,11 @@ How to install and launch brain-even game.
 
 Brain-cacl game.
 
-<a href="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO" target="_blank"><img src="https://asciinema.org/a/Brga1y4FrNP19oSaNbkFhD7ZO.svg" /></a>
+<a href="https://asciinema.org/a/zKtQ5zfr0apxBK62aEKoy5ba2" target="_blank"><img src="https://asciinema.org/a/zKtQ5zfr0apxBK62aEKoy5ba2.svg" /></a>
 
 Brain-gcd game
 
-<a href="https://asciinema.org/a/3NsCrcU6lkn7pvHlfR6KzAmwM" target="_blank"><img src="https://asciinema.org/a/3NsCrcU6lkn7pvHlfR6KzAmwM.svg" /></a>
+<a href="https://asciinema.org/a/MMDzjpjtSVK1b5dCdE8Wqtnn7" target="_blank"><img src="https://asciinema.org/a/MMDzjpjtSVK1b5dCdE8Wqtnn7.svg" /></a>
 
 Brain-progression game
-
-<a href="https://asciinema.org/a/tU5GC0AQJBJfXXKgjn2irBaSR" target="_blank"><img src="https://asciinema.org/a/tU5GC0AQJBJfXXKgjn2irBaSR.svg" /></a>
+<a href="https://asciinema.org/a/1x0Iuf0WEHsjVgrbXzbC5Nuv9" target="_blank"><img src="https://asciinema.org/a/1x0Iuf0WEHsjVgrbXzbC5Nuv9.svg" /></a>
