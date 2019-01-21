@@ -12,14 +12,13 @@ const isPrime = (number) => {
     if (number % i === 0) {
       return false;
     }
-    return true;
   }
   return true;
 };
 
 const brainPrime = () => {
   const question = randomNumber(1, 100);
-  const correctAnswer = (isPrime(question) === true ? 'yes' : 'no');
+  const correctAnswer = (isPrime(question) ? 'yes' : 'no');
   return cons(question, correctAnswer);
 };
 
