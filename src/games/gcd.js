@@ -13,7 +13,7 @@ const findGcd = (num1, num2) => {
     }
     return iter(divisor - 1);
   };
-  return iter(divisorStart());
+  return iter(divisorStart);
 };
 
 const brainGcd = () => {
